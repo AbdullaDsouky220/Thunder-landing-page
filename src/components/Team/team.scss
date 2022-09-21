@@ -1,0 +1,40 @@
+@import '../../variables/constant.scss';
+@import '../../variables/mixin.scss';
+.team__section {
+    background-color: $background-color;
+  margin: $main-margin;
+  margin-top: 10em;
+  padding-bottom: 2em;
+  color:$font-color;
+
+  .container {
+    @include flex(start, start, column-reverse, 4em);
+    @media (min-width: 900px) {
+      @include flex(center, center, row, 4em);
+    }
+    .left-div {
+        flex: 1;
+        .grow {
+
+            @include flex(start, start, column, 0.7em);
+        }
+
+        .buttons {
+            .btn {
+                padding: 1.2em;
+                background-color: $main-color;
+                color: white;
+            }
+        }
+    }
+    .right {
+flex: 1;
+position:relative;
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+}
+}

@@ -1,0 +1,10 @@
+@import './variables/constant.scss';
+.App {
+   
+    background-color: $background-color;
+
+}
+.container {
+    margin: auto;
+    max-width: 1024px;
+}

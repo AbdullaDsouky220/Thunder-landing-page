@@ -1,0 +1,65 @@
+@import '../../variables//constant.scss';
+@import '../../variables/mixin.scss';
+.contact__container {
+    @include flex(center,center,column,4em);
+@media (min-width:800px) {
+    @include flex(center,center,row,1em);
+
+}
+.left {
+    position: relative;
+    min-width: 50%;
+    img {
+        height: 100%;
+        width: 100%
+    }
+}
+    .right {
+        @include flex(center,center,column,2em);
+        position: relative;
+        padding: 1em;
+        width: 100%;
+        .input__container {
+
+           width: 100%;
+           position: relative;
+        input {
+            padding: 1.5em;
+            position: relative;
+            width: 100%;
+            border-radius: 0.7em;
+            border: 1px solid rgba(0, 0, 0, 0.144);
+            &:focus {
+                border: none;
+                outline: 3px solid $main-color;
+            }
+        }
+        .label__input {
+            position: absolute;
+            font-size: 1.5em;
+            background-color: white;
+            top: -0.8em;
+            padding: 0 0.1em;
+            left: 1em;
+            z-index: 1000;
+           color: rgba(0, 0, 0, 0.616);
+        }
+        textarea {
+            max-width: 350px;
+            max-height: 200px;
+            border-radius: 0.7em;
+
+            border: 1px solid rgba(0, 0, 0, 0.144);
+            &:focus {
+                border: none;
+                outline: 3px solid $main-color;
+            }
+        }
+       }
+       .btn {
+        background-color: $main-color;
+        color: white;
+        padding: 1.4em;
+       }
+    }
+}

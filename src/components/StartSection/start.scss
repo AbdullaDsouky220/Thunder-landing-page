@@ -1,0 +1,31 @@
+@import '../../variables//constant.scss';
+@import '../../variables/mixin.scss';
+
+.start__section {
+    position: relative;
+    overflow: hidden;
+    // background-color: $background-color;
+    border-radius: 0.5em;
+    background-color: white;
+    padding: 2em;
+    background-color: $background-color;
+    background-position: center;
+    background-image: url('../../Assets/bg2image.png');
+    .container {
+        text-align: center;
+        margin-top: $main-margin ;
+        margin-bottom: $main-margin ;
+        color: $font-color;
+        @include flex(center,center,column,1em)
+    }
+    .buttons {
+        @include flex(center,center,row,1em);
+        .btn {
+            border-radius: 2em;
+        }
+        .btn.btn2 {
+            color:white;
+            background-color: $main-color;
+        }
+    }
+}

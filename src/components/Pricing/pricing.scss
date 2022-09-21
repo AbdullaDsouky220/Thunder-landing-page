@@ -1,0 +1,30 @@
+@import '../../variables//constant.scss';
+@import '../../variables/mixin.scss';
+.pricing__section {
+    background-color:white;
+    padding: $main-margin;
+    .container {
+        margin-top: 10em;
+        .upper {
+            @include flex(center,center,column,1em);
+            text-align: center;
+            color:$font-color;
+
+        }
+        .prices__card__container {
+            @include flex(center,center,column,0.8em);
+            
+            @media (min-width:800px) {
+                @include flex(center,center,row,0.8em);
+                div {
+                    flex: 1;
+                    // min-width: 28%;
+                }
+                
+            }
+        }
+    }
+}
+.light-p {
+    color: rgba(0, 0, 0, 0.671);
+}

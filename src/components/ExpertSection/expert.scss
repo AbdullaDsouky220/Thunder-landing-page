@@ -1,0 +1,104 @@
+@import '../../variables//constant.scss';
+@import '../../variables/mixin.scss';
+
+
+.expert__section {
+    position: relative;
+    overflow: hidden;
+    @include flex(start,start,column,1em);
+    // background-color: $background-color;
+    background-color: white;
+    border-radius: 0.5em;
+    .container
+    {
+        padding: 1em;
+        @media (min-width:800px) {
+            @include flex(center,center,column,1em);
+    
+              padding: 2em  ;
+        }
+    .upper {
+        @include flex(center,center,column,1em);
+        color:$font-color;
+        text-align: center;
+        
+    }
+}
+}
+.cards__container {
+    margin-top: $main-margin;
+    @include flex(center,center,row,1em);
+    
+
+    // overflow-x: scroll;
+    transition: all 1s;
+    @media (min-width:800px) {
+        @include flex(center,center,row,1em);
+
+    }
+  
+
+   
+   
+
+    .expert__Card {
+
+        @include flex(start,start,column,1em);
+        .left {
+            @include flex(start,start,column,1em);  
+            
+        }
+        .right {
+            img {
+                height: 15em;
+                border-radius: 1em;
+            }
+        }
+    }
+    @media (min-width:900px) {
+        @include flex(start,start,row,1em);
+        .expert__Card {
+            @include flex(start,start,row,1em);
+
+        }
+    }
+}
+.cards__container::-webkit-scrollbar {
+    display: none;
+}
+.dots {
+    margin-top: 1em;
+    text-align: center;
+    color: $main-color;
+    @include flex(start,center,row,1em);
+   .dot {
+        cursor: pointer;
+    }
+    .active {
+        color: $font-color;
+    }
+
+
+}
+.icons {
+    @include flex(start,start,row,1em);
+    .social__icons {
+    @include flex(start,start,row,1em);
+    background-color: $background-color;
+    color: $font-color;
+    border: 1px solid $main-color;
+    padding: 0.5em;
+    border-radius: 50%;
+    transition: all .4s;
+    cursor: pointer;
+    &:hover {
+        background-color: $main-color;
+        color: white;
+    }
+
+}
+}
+.btn {
+    background-color: $main-color;
+
+color:white            }

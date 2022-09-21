@@ -1,0 +1,84 @@
+@import '../../variables//constant.scss';
+@import '../../variables/mixin.scss';
+.client__section {
+    background-color: white;
+    color: $font-color;
+    padding-top: $main-margin;
+    color: $font-color;
+    padding-bottom: 5em;
+
+    .container {
+        
+        padding-top: $main-margin ;
+        .upper {
+            @include flex(center,center,column,1em);
+            text-align: center;
+            p{
+                max-width: 70%;
+            }
+
+        }
+        .client-card {
+            margin-top: 2em ;
+            @include flex(start,center,column,2em);
+            @media (min-width:800px) {
+                @include flex(start,center,row,2em);
+                
+            }
+            padding: 1em;
+            h5 {
+                font-size: 1.55em;
+            }
+            .quote {
+                font-size: 2.5em;
+                color: $main-color;
+            }
+            p{
+                font-size: 1.5em;
+                font-weight: bold;
+            }
+            .role {
+                color: $main-color;
+                font-size: 1em;
+
+            }
+            img {
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+    .current__image {
+        @include flex(center,center,row,1em);
+
+        .image__container {
+            border-radius: 50%;
+            width:3em;
+            height: 3em;
+            opacity: 0.5;
+            padding: 0;
+            cursor: pointer;
+            transition: all 0.5s;
+            overflow: hidden;
+            @include flex(center,center,co,1em);
+           
+            img{
+                height: 135%;
+                width: 135%;
+                border-radius: 50%;
+                object-fit: cover;
+            
+
+                
+            }
+        }
+    }
+}
+.current__image {
+    .image__container.active {
+
+        border: 2px solid $main-color;
+        margin-top: 2em;
+        opacity: 1;
+    }
+}

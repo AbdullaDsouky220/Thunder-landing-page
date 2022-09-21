@@ -1,0 +1,72 @@
+@import '../../variables/constant.scss';
+@import '../../variables/mixin.scss';
+.footer {
+    padding: 5em 1em;
+    
+    .colums__container {
+        @include flex(start,start,column,1em);
+        @media (min-width:700px) {
+            @include flex(start,start,row,1em);
+            
+        }
+        div {
+            @include flex(start,start,column,1em);
+
+            p {
+                cursor: pointer;
+                width: 100%;
+                color: rgba(0, 0, 0, 0.637);
+                &:hover {
+                    color: $main-color;
+                }
+            }
+        }
+        .col {
+            width: 50%;
+
+            p {
+                width: 100%;
+            }
+        }
+        .icons {
+            @include flex(start,start,row,1em);
+
+        }
+        .col-3 {
+            div {
+                @include flex(center,center,row,0em);
+                input {
+                    width: 100%;
+                    padding: 1em 5em;
+                    border-radius: 0.2em;
+                    background-color: $main-color;;
+                    border: none;
+                    &:focus {
+                        outline: none;
+                        background-color: white;
+                    }
+                }
+                button {
+                    padding: 2.7em;
+                    font-size: 0.3em;
+                }
+            }
+            
+        }
+        
+    }
+}
+.icon__plus {
+    padding: 1.3em 1em;
+    color: white;
+    z-index: 100000000;
+    background-color: $main-color;
+}
+.footer__background {
+    text-align: center;
+    margin: 1em 0  0 0;
+    p {
+        margin: 2em 0 0 0;
+
+    }
+}

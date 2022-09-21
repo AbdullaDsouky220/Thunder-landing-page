@@ -1,0 +1,32 @@
+@import '../../variables//constant.scss';
+@import '../../variables/mixin.scss';
+.brands__section {
+    background-color: $background-color;
+    padding-bottom: 10em;
+    padding: $main-margin;
+    .container {
+        margin-top: 5em;
+        padding-bottom: 5em;
+
+        .upper {
+            @include flex(center,center,column,1em);
+            text-align: center;
+            color:$font-color;
+
+        }
+        .brands__images {
+            margin-top: 2em;
+            
+            @include flex(center,center,column,1em);
+            @media (min-width:800px) {
+                @include flex(center,center,row,2em);
+                
+            };
+        }
+        img {
+            height: 100%;
+            opacity: 0em;
+        };
+    }
+
+}

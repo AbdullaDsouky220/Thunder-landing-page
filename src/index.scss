@@ -1,0 +1,12 @@
+@import   '../src/variables/constant.scss' ;
+// @import '../../variables//constant.scss';
+@import '../src/variables/mixin.scss';
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    background-color:white
+}

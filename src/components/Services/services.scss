@@ -1,0 +1,121 @@
+@import '../../variables/mixin.scss';
+@import '../../variables/constant.scss';
+.serviceConitainer {
+   height: 100vh;
+   color:$font-color;
+
+   background-position: center;
+   background: rgba(0, 0, 0, 0);
+   background-color: white;
+   padding: $main-margin;
+   height: fit-content;
+   background-repeat: repeat;
+   margin-top: 10em;
+.container {
+    @include flex(start,start,column,3em);
+
+    .upper {
+        @include flex(center,center,column,0.7em);
+     p:nth-child(1){
+         font-size: 1.3em;
+         font-weight: bold;
+     }
+     p:nth-child(2){
+         font-size: 0.9em;
+         font-weight: light;
+         width: 50%;
+         color: rgba(15, 13, 13, 0.705);
+     }
+     img {
+         height: 15px;
+     }
+    }
+    .services__container {
+        @include flex(start,start,column,1em);
+        @media (min-width:800px) {
+            @include flex(start,start,row,1em);
+            .service {
+             width:33%
+            }
+        }
+     .service {
+         @include flex(start,start,column,1em);
+         background-color: #fff;
+         padding: 1em;
+         border-radius: 0.5em;
+         box-shadow: 0 2px 2px rgba(51, 68, 255, 0.14);
+         .icon__container {
+             background-color: $background-color;
+             color: $main-color;
+             width: max-content;
+             padding: 0.7em;
+             border-radius: 0.5em;
+ 
+         }
+         p{
+             font-size: 0.9em;
+             font-weight: light;
+             color: rgba(15, 13, 13, 0.705);
+         }
+         .learn__more {
+             cursor: pointer;
+             @include flex(center,center,row,0.7em);
+ 
+         }
+     }
+    }
+    .choose__section {
+     @include flex(start,start,column,2em);
+     @media (min-width:880px) {
+     @include flex(center,center,row,2em);
+     .left{
+         flex: 1
+     }
+     .right {
+         flex: 1
+     }
+ }
+     .left {
+         @include flex(start,start,column,0.8em);
+ 
+         .light-p{
+             font-size: 1.2em;
+             font-weight: light;
+             color: rgba(15, 13, 13, 0.589);
+         }
+         .btn {
+             color: white;
+             font-size: 1.1em;
+             background-color:transparent;
+             border: 1px solid $main-color;
+             color: black;
+
+             padding: 0.8em 2em;
+             &:hover {
+                 color: white;
+                 background-color: $main-color;
+             }
+         }
+     }
+     .right {
+         @include flex(center,center,column,0.7em);
+         .col {
+             @include flex(center,center,row,0.7em);
+ 
+            .num {
+             background-color: #dceef0;
+             width: fit-content;
+             padding: 1em;
+             border-radius: 1em;
+             span {
+                 color: $main-color;
+                 font-size: 2em;
+                 font-weight: bold;
+             }
+ 
+            }
+         }
+     }
+    }
+}
+}
